@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Spinner from "./Spinner";
 
 function Card() {
   // Use useState hook for state variables
@@ -58,7 +59,7 @@ function Card() {
           </div>
         ))
       ) : (
-        <h1>Loading...</h1>
+        <Spinner />
       )}
     </>
   );
