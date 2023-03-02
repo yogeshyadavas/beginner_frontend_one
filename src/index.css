@@ -14,6 +14,9 @@
 }
 
 @layer components {
+  .responsive-design {
+    @apply xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] w-screen h-screen pl-[15px] pr-[15px] mr-auto ml-auto;
+  }
   .shadow-card {
     @apply shadow-[0_2px_2px_0_rgba(0,0,0,.14),0_3px_1px_-2px_rgba(0,0,0,.12),0_1px_5px_0_rgba(0,0,0,.2)];
   }

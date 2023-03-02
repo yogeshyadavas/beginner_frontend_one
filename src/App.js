@@ -3,8 +3,8 @@ import Card from "./components/Card";
 function App() {
   return (
     <>
-      <div>
-        <Card />
+      <div className="box-border responsive-design">
+       <Card />
       </div>
     </>
   );
