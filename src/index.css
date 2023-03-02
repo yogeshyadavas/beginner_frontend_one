@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F5F5F5];
+    @apply text-base;
+    @apply font-normal;
+    @apply text-left;
+    @apply text-[#212529];
+    @apply leading-[1.5];
+  }
+}
+
+@layer components {
+  .shadow-card {
+    @apply shadow-[0_2px_2px_0_rgba(0,0,0,.14),0_3px_1px_-2px_rgba(0,0,0,.12),0_1px_5px_0_rgba(0,0,0,.2)];
+  }
+  .row {
+    @apply flex flex-wrap mr-[-15px] ml-[-15px];
+  }
+  .col-auto {
+    @apply flex-[0_0_auto] w-auto max-w-full pl-[15px] pr-[15px] relative;
+  }
+  .card-align {
+    @apply mt-[20px] mb-[20px] p-[10px] bg-white;
+  }
+  .col {
+    @apply basis-0 grow max-w-full relative w-full pr-[15px] pl-[15px];
+  }
+}
