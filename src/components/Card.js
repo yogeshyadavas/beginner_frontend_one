@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const Card = () => {
+function Card() {
+  // Use useState hook for state variables
+  const [users, setUsers] = useState([]);
+  const [DataisLoaded, setDataisLoaded] = useState(false);
+
+  // Use useEffect hook for componentDidMount
+  useEffect(() => {
+    setTimeout(() => {
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => res.json())
+        .then((json) => {
+          setUsers(json);
+          setDataisLoaded(true);
+        });
+    }, 3000);
+  }, []); // Pass an empty array as dependency to run only once
+
+  // Return the JSX element
   return (
     <>
       <div className="flex">
@@ -13,7 +30,7 @@ const Card = () => {
           />
         </div>
         <div className="bg-blue-300">
-          <h2>Leanne Graham</h2>
+          <h2>Leanne Graham {users.name}</h2>
           <p>
             <strong>Email: </strong>Sincere@april.biz
           </p>
